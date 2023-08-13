@@ -1,61 +1,64 @@
 /* Para quitar los margenes y espacios en todos los elementos del sitio */
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilos generales para la etiqueta body como color de fondo, imagen de fondo, color de texto, tipo de fuente y tamaño*/
 
-body{
-    background: #020202 url("../img/bg.jpg") no-repeat;
-    background-size: 100% ;
-    color:#3e4156;
+body {
+    background: #020202 url("../img/bg-min.jpg") no-repeat;
+    background-size: 100%;
+    color: black;
     font: 14px "Open Sans", Helvetica, Arial, sans-serif;
-    width:100%;
+    width: 100%;
 }
-div{
+
+div {
     width: 65%;
     margin: 0 auto;
 }
 
-nav{
-    display:block;
+nav {
+    display: block;
     margin-top: 100px;
-    background: #3E4156;
-    }
-    
-.menu{display: block; }
-    
-.menu li{
+    background: #3e4156;
+}
+
+.menu {
+    display: block;
+}
+
+.menu li {
     display: inline-block;
     position: relative;
-    z-index: 100; 
+    z-index: 100;
 }
-    
+
 .menu li a {
-    font-weight:600;
+    font-weight: 600;
     text-decoration: none;
     padding: 11px;
-    display:block;
+    display: block;
     color: #ffffff;
-    
+
     -webkit-transition: all 0.2s ease-in-out 0s;
     -moz-transition: all 0.2s ease-in-out 0s;
     -o-transition: all 0.2s ease-in-out 0s;
     -ms-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
-    
-    }
-    
-.menu li a:hover, .menu li:hover > a{
+}
+
+.menu li a:hover,
+.menu li:hover>a {
     color: #ffffff;
-    background: #9CA3DA; 
+    background: #9ca3da;
 }
 
 /* ocultar el segundo nivel del meni */
 .menu ul {
     display: none;
-    margin:0;
+    margin: 0;
     padding: 0;
     width: 150px;
     position: absolute;
@@ -65,15 +68,17 @@ nav{
 }
 
 /* mostar el segundo nivel del ment cuando se pasa el mouse */
-.menu li:hover > ul{ display: block; }
+.menu li:hover>ul {
+    display: block;
+}
 
 .menu ul li {
-    display:block;
+    display: block;
     float: none;
     background: none;
-    margin:0;
+    margin: 0;
     padding: 0;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #ccc;
 }
 
 .menu ul li a {
@@ -83,10 +88,11 @@ nav{
     color: #797979;
 }
 
-.menu ul li a:hover, .menu ul li:hover > a{
-     background: #f0f0f0;
-     border-left: 3px solid #9ca3da;
-     color: #797979;
+.menu ul li a:hover,
+.menu ul li:hover>a {
+    background: #f0f0f0;
+    border-left: 3px solid #9ca3da;
+    color: #797979;
 }
 
 /* Cambiar las posiciones del tercer nivel*/
@@ -96,91 +102,144 @@ nav{
     top: 0px;
 }
 
-
 .mobile-menu {
     display: none;
     width: 100%;
     padding: 11px;
-    background: #3E4156;
+    background: #3e4156;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 600;
 }
 
-.mobile-menu:hover{
-    background: #3E4156;
+.mobile-menu:hover {
+    background: #3e4156;
     color: #ffffff;
     text-decoration: none;
 }
 
 /* Cuerpo */
 
-section { 
-    width: 80%;			/* ancho del section */
-    height: 430px;		/* alto del section */
-    background: white;	/* color de fondo */
+section {
+    width: 80%;
+    /* ancho del section */
+    height: 430px;
+    /* alto del section */
+    background: rgba(255, 255, 255);
+    /* color de fondo */
     float: left;
-    margin-top: 10px;		/*agrega un margen de 10px en la parte superior */
-    box-shadow: 0px 5px #000000; 
+    margin-top: 10px;
+    /*agrega un margen de 10px en la parte superior */
+    box-shadow: 0px 5px #000000;
     overflow-y: scroll;
-  }
+}
 
-section ul{
-list-style: none;
+section ul {
+    list-style: none;
 }
 
 article {
-padding: 5px 10px 0px 15px;
+    padding: 5px 10px 0px 15px;
 }
 
-article li{
-margin-bottom: 15px;
-margin-top: 2px;
+article li {
+    margin-bottom: 15px;
+    margin-top: 2px;
 }
-aside { width: 17%;		/* ancho del aside */
-  height: 390px;		/* alto del aside */
-  background: white;	/* color de fondo */
-  float: left;
-  margin-top: 5px;
-  margin-left: 10px;
-  box-shadow: 0px 5px #000000;
-  margin-bottom: 2px;	/*separar aside */
-}		
 
-aside:nth-of-type(1){ 
-                height: 35px;
-                background: #dddddd; 	 /* también dar el mismo fondo del body */
-              }	
-
-aside .tecno{
-width: 100%;
-margin-bottom: 6px;
-margin-top: 2px;
+aside {
+    width: 17%;
+    /* ancho del aside */
+    height: 390px;
+    /* alto del aside */
+    background: rgba(255, 255, 255);;
+    /* color de fondo */
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    box-shadow: 0px 5px #000000;
+    margin-bottom: 2px;
+    /*separar aside */
 }
-                      
-footer { clear: both; /* Esta propiedad lo que hace es que a partir del footer no permitir elementos flotantes ni a izq ni a der */
-   width: auto;	/* ancho del footer */
-   height: 30px;	/* alto del footer */
-   background: #FFAA00; /* color de fondo (color traido del tema de adobe color) */
-   text-align: center; /* centrar el texto horizontalmente */
-   font-style: italic; 
-   color: white;		/* color de fuente blanco */
-   line-height: 30px; /* sirve para centrar el texto verticalmente. Debe tener el mismo valor del height (alto) */
-  }
+
+aside:nth-of-type(1) {
+    height: 35px;
+    background: #dddddd;
+    /* también dar el mismo fondo del body */
+}
+
+aside .tecno {
+    width: 100%;
+    margin-bottom: 6px;
+    margin-top: 2px;
+}
+
+footer {
+    clear: both;
+    /* Esta propiedad lo que hace es que a partir del footer no permitir elementos flotantes ni a izq ni a der */
+    width: auto;
+    /* ancho del footer */
+    height: 30px;
+    /* alto del footer */
+    background: #ffaa00;
+    /* color de fondo (color traido del tema de adobe color) */
+    text-align: center;
+    /* centrar el texto horizontalmente */
+    font-style: italic;
+    color: white;
+    /* color de fuente blanco */
+    line-height: 30px;
+    /* sirve para centrar el texto verticalmente. Debe tener el mismo valor del height (alto) */
+}
+
+.title {
+    margin-left: 20px;
+    color: #3e4156;
+    font-size: 20px;
+}
+
+form {
+    margin-left: 20px;
+    width: 90%;
+    background-color: #3e4156;
+    color: white;
+    box-shadow: 5px 5px 8px 0px #020202;
+}
+
+.lineForm {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    text-align: left;
+    padding: 0px;
+    margin: 10px;
+}
+
+input,
+textarea,
+select {
+    width: 200px;
+    height: 23px;
+    display: inline-block;
+}
+
+textarea {
+    resize: vertical;
+}
 
 @media (max-width: 767px) {
-
-    .menu{
+    .menu {
         display: none;
     }
 
-    .mobile-menu{
+    .mobile-menu {
         display: block;
         margin-top: 20px;
- 
     }
 
-    nav{
+    nav {
         margin: 0;
         background: none;
     }
@@ -193,39 +252,39 @@ footer { clear: both; /* Esta propiedad lo que hace es que a partir del footer n
     .menu li a {
         background: #ffffff;
         color: #797979;
-        border-top:1px solid #e0e0e0;
-        border-left:3px solid #ffffff;
+        border-top: 1px solid #e0e0e0;
+        border-left: 3px solid #ffffff;
     }
 
-    .menu li a:hover, .menu li:hover > a{
+    .menu li a:hover,
+    .menu li:hover>a {
         background: #f0f0f0;
         color: #797979;
-        border-left:3px solid #9CA3DA;
+        border-left: 3px solid #9ca3da;
     }
-    
+
     /*Los niveles 2 y 3 se hacen del mismo tamafio que el nivel 1*/
-.menu ul {
-    display:block;
-    position: relative;
-    top:0;
-    left: 0;
-    width: 100%
-}
- 
+    .menu ul {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 
-.menu ul ul {left:0;}
+    .menu ul ul {
+        left: 0;
+    }
 
-div{
-    width: 98%;
-}
+    div {
+        width: 98%;
+    }
 
-section{
-    height: 650px;
-}
+    section {
+        height: 650px;
+    }
 
-section aside {
-    height: auto;
-}
-
-
+    section aside {
+        height: auto;
+    }
 }
